@@ -90,6 +90,6 @@ tqdm==4.32.1
 ujson==1.35
 urllib3==1.24.2
 wcwidth==0.1.7
-Werkzeug==0.15.2
+Werkzeug==0.15.3
 wrapt==1.10.11
 zipp==0.5.2
