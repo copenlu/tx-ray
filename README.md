@@ -20,7 +20,7 @@ This repository currently shows how to use TX-Ray for RNNs, using all or only th
 ## overview (pick neurons and model-level insights) plot types
 *Note: plots are in plotly (interactive)*, *not in matplotlib* as in the paper. We chose plotly as backend, as it integrates with both OpenAI [weights and biases](https://www.wandb.com/) and Facebooks [visdom](https://github.com/facebookresearch/visdom)
 + calculate_hellinger_distance computes hellinger distance between the shared neurons for two models or the pre-trained vs. fine tuned training stage. The results are later saved to the directory provided. Turn on the calculate_distance_flag to True value to compute the distance.
-+ hellinger_length_plot plots a scatter plot between Hellinger length to the hellinger distance for every neuron from calculate_hellinger_distance. Hellinger length is the number of unique features activated between 2 two neuron distributions -- i.e. the union of distribition d_1 OR distribition d_2 features, e.g. d_2={I. like}, d_2={I, cookies} -> Hellinger length 3 because d_1 OR d_2 = {I, lile, cookies}.
++ hellinger_length_plot plots a scatter plot between Hellinger length to the hellinger distance for every neuron from calculate_hellinger_distance. Hellinger length is the number of unique features activated between 2 two neuron distributions -- i.e. the union of distribition d_1 OR distribition d_2 features, e.g. d_2={I. like}, d_2={I, cookies} -> Hellinger length 3 because d_1 OR d_2 = {I, like, cookies}.
 <p align="center">
   <img src="/Examples/LSTM/plots/hellinger_length.png" width=630 title="hover text">
 
