@@ -46,7 +46,7 @@ This repository currently shows how to use TX-Ray for RNNs, using all or only th
   <img src="/Examples/LSTM/plots/least10.png" width="630" title="hover text">
 </p>
 
-# Paper and bibtex Reference
+# Paper and bibtex Reference (*currently outdated* -- proper version to appear in UAI 2020)
 [TX-Ray: Quantifying and Explaining Model-Knowledge Transfer in (Un-)Supervised NLP](https://arxiv.org/abs/1912.00982), Nils Rethmeier, Vageesh Saxena, and Isabelle Augenstein
 ```
 @misc{rethmeier2019txray,
