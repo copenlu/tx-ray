@@ -46,15 +46,16 @@ This repository currently shows how to use TX-Ray for RNNs, using all or only th
   <img src="/Examples/LSTM/plots/least10.png" width="630" title="hover text">
 </p>
 
-# Paper and bibtex Reference (*currently outdated* -- proper version to appear in UAI 2020)
+# Paper and bibtex Reference (*bibtex currently outdated* -- proper version to appear after UAI 2020)
 [TX-Ray: Quantifying and Explaining Model-Knowledge Transfer in (Un-)Supervised NLP](https://arxiv.org/abs/1912.00982), Nils Rethmeier, Vageesh Saxena, and Isabelle Augenstein
 ```
-@misc{rethmeier2019txray,
-    title={TX-Ray: Quantifying and Explaining Model-Knowledge Transfer in (Un-)Supervised NLP},
-    author={Nils Rethmeier and Vageesh Kumar Saxena and Isabelle Augenstein},
-    year={2019},
-    eprint={1912.00982},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
+@inproceedings{rethmeier2019txray,
+  title={TX-Ray: Quantifying and Explaining Model-Knowledge Transfer in (Un-)Supervised NLP},
+  author={Nils Rethmeier and Vageesh Kumar Saxena and Isabelle Augenstein},
+  booktitle = {Proceedings of the Thirty-Sixth Conference on Uncertainty in Artificial
+               Intelligence, {UAI} 2020, Toronto, Canada, August 03-06, 2020},
+  publisher = {{AUAI} Press},
+  year      = {2020},
+  url       = {https://arxiv.org/pdf/1912.00982.pdf},
 }
 ```
