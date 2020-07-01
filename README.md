@@ -1,10 +1,10 @@
 # TX-Ray: Quantifying and Explaining Model-Knowledge Transfer in (Un-)Supervised NLP ([paper](https://arxiv.org/abs/1912.00982))
 
-TX-Ray is a method to better understand how models learn by visualizing (inspecting), quantifying and analyzing model neuron knowledge building and adaptation. It can be used to compare model knowledge during training epochs, fine-tuning and between architectures. TX-Ray applies the principle of ''visualizing what input features as neuron prefers'', commonly known as activation maximization, and adapts the method for use in NLP -- i.e. to visualize which words each neuron prefers. It does so by aggregating maximal layer activations and connecting them to the discrete input (or output) features that produced the maximum. The resulting feature activation distributions can be used to quantify knowledge change (forgetting and transfer) using distribution distance measures, which works without requiring probing tasks. One can also visualize which features each neuron prefers in a learning stage and explore semantics learned by neurons, which is especially interesting for discovering what knwoledge abstraction (task solving building blocks) self-supervised models learn, which unlike probing tasks/ diagnostic classifiers etc. allow to discover unforseen learning effects.
+TX-Ray is a method to better understand how models learn by visualizing (inspecting), quantifying and analyzing model neuron knowledge building and adaptation. It can be used to compare model knowledge during training epochs, fine-tuning and between architectures. TX-Ray applies the principle of ''visualizing what input features a neuron prefers'', commonly known as activation maximization, and adapts the method for use in NLP -- i.e. to visualize which words each neuron prefers. It does so by aggregating maximal layer activations and connecting them to the discrete input (or output) features that produced the maximum. The resulting feature activation distributions can be used to quantify knowledge change (forgetting and transfer) using distribution distance measures, which works without requiring probing tasks. One can also visualize which features each neuron prefers in a learning stage and explore semantics learned by neurons, which is especially interesting for discovering what knwoledge abstraction (task solving building blocks) self-supervised models learn, which unlike probing tasks/ diagnostic classifiers etc. allow to discover unforseen learning effects.
 
 With TX-Ray, we provide a set of visualizations and measures and that support both *overview and detail* analysis. There are plots that guide users by allowing them to find interesting neurons and then visualize which knowledge these neurons abstract and how it changes during learning.
 
-This repository currently shows how to use TX-Ray for RNNs, using all or only the most active activations for analyis. In the [paper](https://arxiv.org/abs/1912.00982), we focused on the most active neurons -- max-1 activations.
+This repository currently shows how to use TX-Ray for RNNs, using all or only the most active activations for analyis. In the [paper](https://arxiv.org/abs/1912.00982), we focus on the most active neurons -- max-1 activations.
 
 # Dataset
 1. [Wikitext-2](https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-2-v1.zip)
@@ -19,8 +19,8 @@ This repository currently shows how to use TX-Ray for RNNs, using all or only th
 
 ## overview (pick neurons and model-level insights) plot types
 *Note: plots are in plotly (interactive)*, *not in matplotlib* as in the paper. We chose plotly as backend, as it integrates with [Weights and Biases](https://www.wandb.com/) and Facebooks [visdom](https://github.com/facebookresearch/visdom)
-+ calculate_hellinger_distance computes hellinger distance between the shared neurons for two models or the pre-trained vs. fine tuned training stage. The results are later saved to the directory provided. Turn on the calculate_distance_flag to True value to compute the distance.
-+ hellinger_length_plot plots a scatter plot between Hellinger length to the hellinger distance for every neuron from calculate_hellinger_distance. Hellinger length is the number of unique features activated between 2 two neuron distributions -- i.e. the union of distribition d_1 OR distribition d_2 features, e.g. d_2={I. like}, d_2={I, cookies} -> Hellinger length 3 because d_1 OR d_2 = {I, like, cookies}.
++ calculate_hellinger_distance computes Hellinger distance between the shared neurons for two models or the pre-trained vs. fine tuned training stage. The results are later saved to the directory provided. Turn on the calculate_distance_flag to True value to compute the distance.
++ hellinger_length_plot plots a scatter plot between Hellinger length to the Hellinger distance for every neuron from calculate_hellinger_distance. Hellinger length is the number of unique features activated between 2 two neuron distributions -- i.e. the union of distribition d_1 OR distribition d_2 features, e.g. d_2={I. like}, d_2={I, cookies} -> Hellinger length 3 because d_1 OR d_2 = {I, like, cookies}.
 <p align="center">
   <img src="/Examples/LSTM/plots/hellinger_length.png" width=630 title="hover text">
 
@@ -38,7 +38,7 @@ This repository currently shows how to use TX-Ray for RNNs, using all or only th
   <img src="/Examples/LSTM/plots/mass_activation.png" width="630" title="hover text">
   
 ## detail (zoom in to see what knowledge neurons abstract) plot types  
-+ plot_top_10_hellinger_neurons and plot_least_10_hellinger_neurons generate visualizations for the neurons with most and least 10 hellinger distances between training stage or model (saved as neuron distribitions).
++ plot_top_10_hellinger_neurons and plot_least_10_hellinger_neurons generate visualizations for the neurons with most and least 10 Hellinger distances between training stage or model (saved as neuron distribitions).
 <p align="center">
   <img src="/Examples/LSTM/plots/top10.png" width="630" title="hover text">
 </p>
