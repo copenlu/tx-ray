@@ -49,13 +49,17 @@ This repository currently shows how to use TX-Ray for RNNs, using all or only th
 # Paper and bibtex Reference (*bibtex currently outdated* -- proper version to appear after UAI 2020)
 [TX-Ray: Quantifying and Explaining Model-Knowledge Transfer in (Un-)Supervised NLP](https://arxiv.org/abs/1912.00982), Nils Rethmeier, Vageesh Saxena, and Isabelle Augenstein
 ```
-@inproceedings{rethmeier2019txray,
-  title={TX-Ray: Quantifying and Explaining Model-Knowledge Transfer in (Un-)Supervised NLP},
-  author={Nils Rethmeier and Vageesh Kumar Saxena and Isabelle Augenstein},
-  booktitle = {Proceedings of the Thirty-Sixth Conference on Uncertainty in Artificial
-               Intelligence, {UAI} 2020, Toronto, Canada, August 03-06, 2020},
-  publisher = {{AUAI} Press},
-  year      = {2020},
-  url       = {https://arxiv.org/pdf/1912.00982.pdf},
-}
+@InProceedings{pmlr-v124-rethmeier20a,
+  title =        {TX-Ray: Quantifying and Explaining Model-Knowledge Transfer in (Un-)Supervised NLP},
+  author =       {Rethmeier, Nils and Kumar Saxena, Vageesh and Augenstein, Isabelle},
+  pages =        {440--449},
+  year =         {2020},
+  editor =       {Jonas Peters and David Sontag},
+  volume =       {124},
+  series =       {Proceedings of Machine Learning Research},
+  address =      {Virtual},
+  month =        {03--06 Aug},
+  publisher =    {PMLR},
+  pdf =          {http://proceedings.mlr.press/v124/rethmeier20a/rethmeier20a.pdf},
+  url =          {http://proceedings.mlr.press/v124/rethmeier20a.html},
 ```
