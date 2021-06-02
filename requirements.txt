@@ -88,7 +88,7 @@ toolz==0.10.0
 torch==1.1.0
 tqdm==4.32.1
 ujson==1.35
-urllib3==1.24.2
+urllib3==1.26.5
 wcwidth==0.1.7
 Werkzeug==0.15.2
 wrapt==1.10.11
